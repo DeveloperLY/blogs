@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>TabBar 的 Item 按钮的像素大小</title>
+      <link href="/2019/01/20/TabBar%20%E7%9A%84%20Item%20%E6%8C%89%E9%92%AE%E7%9A%84%E5%83%8F%E7%B4%A0%E5%A4%A7%E5%B0%8F/"/>
+      <url>/2019/01/20/TabBar%20%E7%9A%84%20Item%20%E6%8C%89%E9%92%AE%E7%9A%84%E5%83%8F%E7%B4%A0%E5%A4%A7%E5%B0%8F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="TabBar的Item按钮的像素大小要求"><a href="#TabBar的Item按钮的像素大小要求" class="headerlink" title="TabBar的Item按钮的像素大小要求"></a>TabBar的Item按钮的像素大小要求</h2><p>根据<a href="https://developer.apple.com/design/human-interface-guidelines/" target="_blank" rel="noopener">苹果官方人机界面指南（Human Interface Guidelines）</a>可以得知：</p><p>iOS系统会根据设备和方向显示两种标签栏：<code>常规（Regular）</code>和<code>紧凑（Compact）</code>，<br>所以在设置<code>自定义TabBar Item</code>的时候也应该包含常规和紧凑两种不同的尺寸～</p><p><code>根据图形是圆形、方形、宽形、高形</code>，像素也有不同的要求：</p><ul><li><p>如果图标是圆形的，应该提供：25pt@2x、25pt@3x、18pt@2x、18pt@3x</p></li><li><p>如果图标是方形的，应该提供：23pt@2x、23pt@3x、17pt@2x、17pt@3x</p></li></ul><a id="more"></a><ul><li><p>如果图标是宽形的，应该提供：31pt@2x、31pt@3x、23pt@2x、23pt@3x</p></li><li><p>如果图标是高形的，应该提供：28pt@2x、28pt@3x、20pt@2x、20pt@3x</p></li></ul><h2 id="完整表格"><a href="#完整表格" class="headerlink" title="完整表格~"></a>完整表格~</h2><p><img src="/images/20190120/Snip20190120_1.png" alt="Snip20190120_1.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> iOS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> iOS开发 </tag>
+            
+            <tag> UI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>复杂度分析</title>
       <link href="/2018/12/30/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/"/>
       <url>/2018/12/30/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/</url>
@@ -44,11 +69,11 @@
       
         <tags>
             
+            <tag> 算法 </tag>
+            
             <tag> 数据结构和算法 </tag>
             
             <tag> 数据结构 </tag>
-            
-            <tag> 算法 </tag>
             
         </tags>
       
@@ -73,11 +98,11 @@
             
             <tag> LLVM </tag>
             
-            <tag> 编译器 </tag>
-            
             <tag> Clang </tag>
             
             <tag> 插件开发 </tag>
+            
+            <tag> 编译器 </tag>
             
         </tags>
       
