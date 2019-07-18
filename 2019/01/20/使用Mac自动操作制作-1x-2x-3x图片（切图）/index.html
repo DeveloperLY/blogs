@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="iOS开发,UI,">
+  <meta name="keywords" content="iOS开发,UI,切图,自动操作,Automator,">
 
 
 
@@ -88,20 +88,33 @@
 
 
 
-<meta name="description" content="TabBar的Item按钮的像素大小要求根据苹果官方人机界面指南（Human Interface Guidelines）可以得知： iOS系统会根据设备和方向显示两种标签栏：常规（Regular）和紧凑（Compact），所以在设置自定义TabBar Item的时候也应该包含常规和紧凑两种不同的尺寸～ 根据图形是圆形、方形、宽形、高形，像素也有不同的要求：  如果图标是圆形的，应该提供：25pt@">
-<meta name="keywords" content="iOS开发,UI">
+<meta name="description" content="在iOS开发中，使用的图片要求导入@1x、@2x和@3x:  使用@1x格式：iPhone3GS（基本上是淘汰了）  使用@2x格式：iPhone 4，4S，5，5S，5C，SE，6，6S，7，8，XR  使用@3x格式：iPhone 6Plus、6sPlus、7Plus、8Plus、X、XS、XS Max   这样在开发过程中，将三种图片（比如分别为【xxx.png】、【xxx@2x.png】">
+<meta name="keywords" content="iOS开发,UI,切图,自动操作,Automator">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TabBar 的 Item 按钮的像素大小">
-<meta property="og:url" content="http://blog.developerly.net/2019/01/20/TabBar 的 Item 按钮的像素大小/index.html">
+<meta property="og:title" content="使用Mac自动操作制作@1x@2x@3x图片（切图）">
+<meta property="og:url" content="http://blog.developerly.net/2019/01/20/使用Mac自动操作制作-1x-2x-3x图片（切图）/index.html">
 <meta property="og:site_name" content="DeveloperLY&#39;s Blog">
-<meta property="og:description" content="TabBar的Item按钮的像素大小要求根据苹果官方人机界面指南（Human Interface Guidelines）可以得知： iOS系统会根据设备和方向显示两种标签栏：常规（Regular）和紧凑（Compact），所以在设置自定义TabBar Item的时候也应该包含常规和紧凑两种不同的尺寸～ 根据图形是圆形、方形、宽形、高形，像素也有不同的要求：  如果图标是圆形的，应该提供：25pt@">
+<meta property="og:description" content="在iOS开发中，使用的图片要求导入@1x、@2x和@3x:  使用@1x格式：iPhone3GS（基本上是淘汰了）  使用@2x格式：iPhone 4，4S，5，5S，5C，SE，6，6S，7，8，XR  使用@3x格式：iPhone 6Plus、6sPlus、7Plus、8Plus、X、XS、XS Max   这样在开发过程中，将三种图片（比如分别为【xxx.png】、【xxx@2x.png】">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190120_1.png">
-<meta property="og:updated_time" content="2019-07-18T12:33:31.542Z">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_2.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_3.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_4.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_5.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_6.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_7.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_8.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_9.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_10.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_11.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_12.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_13.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_14.png">
+<meta property="og:image" content="http://blog.developerly.net/images/20190120/Snip20190718_15.png">
+<meta property="og:updated_time" content="2019-07-18T14:09:10.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TabBar 的 Item 按钮的像素大小">
-<meta name="twitter:description" content="TabBar的Item按钮的像素大小要求根据苹果官方人机界面指南（Human Interface Guidelines）可以得知： iOS系统会根据设备和方向显示两种标签栏：常规（Regular）和紧凑（Compact），所以在设置自定义TabBar Item的时候也应该包含常规和紧凑两种不同的尺寸～ 根据图形是圆形、方形、宽形、高形，像素也有不同的要求：  如果图标是圆形的，应该提供：25pt@">
-<meta name="twitter:image" content="http://blog.developerly.net/images/20190120/Snip20190120_1.png">
+<meta name="twitter:title" content="使用Mac自动操作制作@1x@2x@3x图片（切图）">
+<meta name="twitter:description" content="在iOS开发中，使用的图片要求导入@1x、@2x和@3x:  使用@1x格式：iPhone3GS（基本上是淘汰了）  使用@2x格式：iPhone 4，4S，5，5S，5C，SE，6，6S，7，8，XR  使用@3x格式：iPhone 6Plus、6sPlus、7Plus、8Plus、X、XS、XS Max   这样在开发过程中，将三种图片（比如分别为【xxx.png】、【xxx@2x.png】">
+<meta name="twitter:image" content="http://blog.developerly.net/images/20190120/Snip20190718_2.png">
 
 
 
@@ -131,7 +144,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.developerly.net/2019/01/20/TabBar 的 Item 按钮的像素大小/">
+  <link rel="canonical" href="http://blog.developerly.net/2019/01/20/使用Mac自动操作制作-1x-2x-3x图片（切图）/">
 
 
 
@@ -147,7 +160,7 @@ daovoice('update');
 </script>
  
 
-  <title>TabBar 的 Item 按钮的像素大小 | DeveloperLY's Blog</title>
+  <title>使用Mac自动操作制作@1x@2x@3x图片（切图） | DeveloperLY's Blog</title>
   
 
 
@@ -316,7 +329,7 @@ daovoice('update');
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.developerly.net/2019/01/20/TabBar 的 Item 按钮的像素大小/">
+    <link itemprop="mainEntityOfPage" href="http://blog.developerly.net/2019/01/20/使用Mac自动操作制作-1x-2x-3x图片（切图）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DeveloperLY">
@@ -333,7 +346,7 @@ daovoice('update');
 
         
         
-          <h1 class="post-title" itemprop="name headline">TabBar 的 Item 按钮的像素大小</h1>
+          <h1 class="post-title" itemprop="name headline">使用Mac自动操作制作@1x@2x@3x图片（切图）</h1>
         
 
         <div class="post-meta">
@@ -345,7 +358,7 @@ daovoice('update');
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-20T20:07:40+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-20T21:17:09+08:00">
                 2019-01-20
               </time>
             
@@ -385,7 +398,7 @@ daovoice('update');
 
           
           
-             <span id="/2019/01/20/TabBar 的 Item 按钮的像素大小/" class="leancloud_visitors" data-flag-title="TabBar 的 Item 按钮的像素大小">
+             <span id="/2019/01/20/使用Mac自动操作制作-1x-2x-3x图片（切图）/" class="leancloud_visitors" data-flag-title="使用Mac自动操作制作@1x@2x@3x图片（切图）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -411,7 +424,7 @@ daovoice('update');
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  191
+                  742
                 </span>
               
 
@@ -427,7 +440,7 @@ daovoice('update');
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -448,23 +461,47 @@ daovoice('update');
       
 
       
-        <h2 id="TabBar的Item按钮的像素大小要求"><a href="#TabBar的Item按钮的像素大小要求" class="headerlink" title="TabBar的Item按钮的像素大小要求"></a>TabBar的Item按钮的像素大小要求</h2><p>根据<a href="https://developer.apple.com/design/human-interface-guidelines/" target="_blank" rel="noopener">苹果官方人机界面指南（Human Interface Guidelines）</a>可以得知：</p>
-<p>iOS系统会根据设备和方向显示两种标签栏：<code>常规（Regular）</code>和<code>紧凑（Compact）</code>，<br>所以在设置<code>自定义TabBar Item</code>的时候也应该包含常规和紧凑两种不同的尺寸～</p>
-<p><code>根据图形是圆形、方形、宽形、高形</code>，像素也有不同的要求：</p>
+        <p>在iOS开发中，使用的图片要求导入@1x、@2x和@3x:</p>
 <ul>
-<li><p>如果图标是圆形的，应该提供：25pt@2x、25pt@3x、18pt@2x、18pt@3x</p>
+<li><p>使用@1x格式：iPhone3GS（基本上是淘汰了）</p>
 </li>
-<li><p>如果图标是方形的，应该提供：23pt@2x、23pt@3x、17pt@2x、17pt@3x</p>
+<li><p>使用@2x格式：iPhone 4，4S，5，5S，5C，SE，6，6S，7，8，XR</p>
+</li>
+<li><p>使用@3x格式：iPhone 6Plus、6sPlus、7Plus、8Plus、X、XS、XS Max</p>
 </li>
 </ul>
+<p>这样在开发过程中，将三种图片（比如分别为<code>【xxx.png】</code>、<code>【xxx@2x.png】</code> 和 <code>【xxx@3x.png】</code>）导入到工程图库中的时候可以自动被识别为1x、2x和3x大小的图片</p>
 <a id="more"></a>
-<ul>
-<li><p>如果图标是宽形的，应该提供：31pt@2x、31pt@3x、23pt@2x、23pt@3x</p>
-</li>
-<li><p>如果图标是高形的，应该提供：28pt@2x、28pt@3x、20pt@2x、20pt@3x</p>
-</li>
-</ul>
-<h2 id="完整表格"><a href="#完整表格" class="headerlink" title="完整表格~"></a>完整表格~</h2><p><img src="/images/20190120/Snip20190120_1.png" alt="Snip20190120_1.png"></p>
+<p>可以利用Mac系统中自带的服务自己制作一个快速生成@1x、@2x和@3x图片的功能</p>
+<p>首先<code>spotlight</code>搜索<code>Automator</code>，然后按<code>Enter</code>打开</p>
+<p><img src="/images/20190120/Snip20190718_2.png" alt="Snip20190718_2.png"></p>
+<p>新建文稿</p>
+<p><img src="/images/20190120/Snip20190718_3.png" alt="Snip20190718_3.png"></p>
+<p>选取文稿类型为<code>快速操作</code></p>
+<p><img src="/images/20190120/Snip20190718_4.png" alt="Snip20190718_4.png"></p>
+<p>在<code>工作流程收到当前</code>的后面选择<code>图像文件</code></p>
+<p><img src="/images/20190120/Snip20190718_5.png" alt="Snip20190718_5.png"></p>
+<p>在左边窗口的“<code>操作</code>”下，选择“<code>资源库</code>”中的“<code>文件和文件夹</code>”，将右侧中的“<code>给访达项目重新命名</code>”拖入最右侧的窗口中，（如果警告提示是否要增加一个“<code>拷贝访达项目</code>”操作，选择“<code>不添加</code>”），选择“<code>添加文本</code>”，在输入框中输入【<code>@3x</code>】</p>
+<p><img src="/images/20190120/Snip20190718_6.png" alt="Snip20190718_6.png"></p>
+<p>拖入“<code>复制访达项目</code>”</p>
+<p><img src="/images/20190120/Snip20190718_7.png" alt="Snip20190718_7.png"></p>
+<p>选择左侧“<code>资源库</code>”中的照片，将“<code>缩放图像</code>”拖入右侧窗口（如果警告提示是否要增加一个“<code>拷贝访达项目</code>”操作，选择“<code>不添加</code>”），并选择“<code>按百分比</code>”，输入【<code>66</code>】</p>
+<p><img src="/images/20190120/Snip20190718_8.png" alt="Snip20190718_8.png"></p>
+<p>再拖入“<code>文件和文件夹</code>”下的“<code>给访达项目重新命名</code>”，（如果警告提示是否要增加一个“<code>拷贝访达项目</code>”操作，选择“<code>不添加</code>”）并选择【<code>替换文本</code>】，查找【<code>“</code>】，以【<code>仅基本名称</code>】；再拖入“<code>文件和文件夹</code>”下的“<code>给访达项目重新命名</code>”，并选择【<code>替换文本</code>】，查找【<code>@3x”的副本</code>】，以【<code>仅基本名称</code>】，替换成【<code>@2x</code>】</p>
+<p><img src="/images/20190120/Snip20190718_9.png" alt="Snip20190718_9.png"></p>
+<p>拖入“<code>复制访达项目</code>”，选择左侧“<code>资源库</code>”中的照片，将“<code>缩放图像</code>”拖入右侧窗口（如果警告提示是否要增加一个“<code>拷贝访达项目</code>”操作，选择“<code>不添加</code>”），并选择“<code>按百分比</code>”，输入【<code>50</code>】</p>
+<p><img src="/images/20190120/Snip20190718_10.png" alt="Snip20190718_10.png"></p>
+<p>再拖入“<code>文件和文件夹</code>”下的“<code>给访达项目重新命名</code>”，（如果警告提示是否要增加一个“<code>拷贝访达项目</code>”操作，选择“<code>不添加</code>”）并选择【<code>替换文本</code>】，查找【<code>“</code>】，以【<code>仅基本名称</code>】，再拖入“<code>文件和文件夹</code>”下的“<code>给访达项目重新命名</code>”，并选择【<code>替换文本</code>】，查找【<code>@2x”的副本</code>】，以【<code>仅基本名称</code>】</p>
+<p><img src="/images/20190120/Snip20190718_11.png" alt="Snip20190718_11.png"></p>
+<p>然后保存，将“<code>快速操作</code>”存储为“<code>制作@2x@3x图片</code>”</p>
+<p><img src="/images/20190120/Snip20190718_12.png" alt="Snip20190718_12.png"></p>
+<p>每次使用的时候，只需选中图片，选择<code>访达 -&gt; 服务 -&gt; 制作@2x@3x图片</code>，就会自动生成三个图片：<code>【xxx.png】</code>、<code>【xxx@2x.png】</code>和<code>【xxx@3x.png】</code></p>
+<p><img src="/images/20190120/Snip20190718_13.png" alt="Snip20190718_13.png"></p>
+<p>或者选择图片，右键<code>服务 -&gt; 制作@2x@3x图片</code>一样会自动生成三个图片：<code>【xxx.png】</code>、<code>【xxx@2x.png】</code> 和 <code>【xxx@3x.png】</code></p>
+<p><img src="/images/20190120/Snip20190718_14.png" alt="Snip20190718_14.png"></p>
+<p>注意：这里3x的图片是当前图片，也就制作的原图就是3x的；</p>
+<p>最终效果~</p>
+<p><img src="/images/20190120/Snip20190718_15.png" alt="Snip20190718_15.png"></p>
 
       
     </div>
@@ -526,6 +563,12 @@ daovoice('update');
           
             <a href="/tags/UI/" rel="tag"><i class="fa fa-tag"></i> UI</a>
           
+            <a href="/tags/切图/" rel="tag"><i class="fa fa-tag"></i> 切图</a>
+          
+            <a href="/tags/自动操作/" rel="tag"><i class="fa fa-tag"></i> 自动操作</a>
+          
+            <a href="/tags/Automator/" rel="tag"><i class="fa fa-tag"></i> Automator</a>
+          
         </div>
       
 
@@ -537,8 +580,8 @@ daovoice('update');
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/30/复杂度分析/" rel="next" title="复杂度分析">
-                <i class="fa fa-chevron-left"></i> 复杂度分析
+              <a href="/2019/01/20/TabBar 的 Item 按钮的像素大小/" rel="next" title="TabBar 的 Item 按钮的像素大小">
+                <i class="fa fa-chevron-left"></i> TabBar 的 Item 按钮的像素大小
               </a>
             
           </div>
@@ -546,10 +589,6 @@ daovoice('update');
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/20/使用Mac自动操作制作-1x-2x-3x图片（切图）/" rel="prev" title="使用Mac自动操作制作@1x@2x@3x图片（切图）">
-                使用Mac自动操作制作@1x@2x@3x图片（切图） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -644,17 +683,8 @@ daovoice('update');
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -763,22 +793,6 @@ daovoice('update');
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TabBar的Item按钮的像素大小要求"><span class="nav-number">1.</span> <span class="nav-text">TabBar的Item按钮的像素大小要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整表格"><span class="nav-number">2.</span> <span class="nav-text">完整表格~</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
