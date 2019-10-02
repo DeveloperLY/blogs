@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.developerly.net/"/>
-  <updated>2019-10-02T19:54:02.647Z</updated>
+  <updated>2019-10-02T20:00:30.767Z</updated>
   <id>http://blog.developerly.net/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>iOS 中使用 iconfont 替换 Assets 中的图标资源</title>
-    <link href="http://blog.developerly.net/2019/02/03/iOS%20%E8%B5%84%E6%BA%90%E5%9B%BE%E7%89%87%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E5%87%8F%E5%B0%91%E5%8C%85%E5%A4%A7%E5%B0%8F/"/>
-    <id>http://blog.developerly.net/2019/02/03/iOS 资源图片的使用方式减少包大小/</id>
+    <link href="http://blog.developerly.net/2019/02/03/iOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20iconfont%20%E6%9B%BF%E6%8D%A2%20Assets%20%E4%B8%AD%E7%9A%84%E5%9B%BE%E6%A0%87%E8%B5%84%E6%BA%90/"/>
+    <id>http://blog.developerly.net/2019/02/03/iOS 中使用 iconfont 替换 Assets 中的图标资源/</id>
     <published>2019-02-03T02:35:32.000Z</published>
-    <updated>2019-10-02T19:54:02.647Z</updated>
+    <updated>2019-10-02T20:00:30.767Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="一、关于-iconfont"><a href="#一、关于-iconfont" class="headerlink" title="一、关于 iconfont"></a>一、关于 iconfont</h2><p>从名字上拆分<code>icon</code> + <code>font</code>字面上大家都可以理解，其实<code>iconfont</code> 就是让我们可以像使用字体一样来使用图标。</p><p>使用 <code>iconfont</code> 的好处有：</p><ul><li>可以减少 <code>App</code> 的体积；</li><li>图标保真缩放，可以省去 <code>@2x</code> 和 <code>@3x</code> 图的适配；</li><li>适应换肤需求，使用方便。<a id="more"></a><h2 id="二、使用-iconfont"><a href="#二、使用-iconfont" class="headerlink" title="二、使用 iconfont"></a>二、使用 iconfont</h2></li></ul><p>首先去 <code>iconfont</code> 图标库下载需求图标</p><p><a href="https://www.iconfont.cn" target="_blank" rel="noopener">阿里巴巴矢量图片库</a></p><p>其它选择</p><p><a href="https://www.easyicon.net" target="_blank" rel="noopener">easyicon</a></p><p><a href="http://fontello.com" target="_blank" rel="noopener">fontello</a></p><p><a href="https://icomoon.io" target="_blank" rel="noopener">icomoon</a></p><p>以阿里巴巴矢量图片库为例使用<code>iconfont</code></p><h3 id="1、选择图片加入购物车加入项目下载"><a href="#1、选择图片加入购物车加入项目下载" class="headerlink" title="1、选择图片加入购物车加入项目下载"></a>1、选择图片加入购物车加入项目下载</h3><p><img src="/images/20190203/Snip20190203_1.png" alt=""></p><p>每个图标都会对应一个<code>unicode码</code>和名称。 这些代码是<code>&amp;#xXXXX</code>格式的，但是在 Xcode 中需要转换成<code>\U0000XXXX</code>格式的。</p><h3 id="2、将-iconfont-ttf-移到工程中"><a href="#2、将-iconfont-ttf-移到工程中" class="headerlink" title="2、将 iconfont.ttf 移到工程中"></a>2、将 iconfont.ttf 移到工程中</h3><p><img src="/images/20190203/Snip20190203_2.png" alt=""></p><p>下载完以后，我们会发现文件夹里包含如图二文件。我们只需要将<code>iconfont.tff</code>拖入工程中即可。</p><h3 id="3、确保已经导入-iconfont-tff"><a href="#3、确保已经导入-iconfont-tff" class="headerlink" title="3、确保已经导入 iconfont.tff"></a>3、确保已经导入 iconfont.tff</h3><p><img src="/images/20190203/Snip20190203_3.png" alt=""></p><p>为了保证<code>iconfont.tff</code>已导入成功，在<code>Target--Build Phases--Bundle Resource</code> 里检查一下。</p><h3 id="4、添加Fonts-provided-by-application字段"><a href="#4、添加Fonts-provided-by-application字段" class="headerlink" title="4、添加Fonts provided by application字段"></a>4、添加<code>Fonts provided by application</code>字段</h3><p><img src="/images/20190203/Snip20190203_4.png" alt=""></p><p>打开<code>info.plist</code>文件，添加<code>Fonts provided by application</code>字段。</p><h2 id="项目中使用"><a href="#项目中使用" class="headerlink" title="项目中使用"></a>项目中使用</h2><p>简单使用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">label.text = IconfontName(@&quot;mine_logout&quot;); // 这里的“mine_logout”就是图标的名称。</span><br><span class="line">label.font = IconFontSize(64);</span><br><span class="line">label.textColor = [UIColor grayColor];</span><br><span class="line">label.textAlignment = NSTextAlignmentCenter;</span><br><span class="line"></span><br><span class="line">// 如果是设置 button 的图标</span><br><span class="line">[btn setTitle:IconfontName(@&quot;chat_voice_normal&quot;) forState:(UIControlStateNormal)];</span><br><span class="line">[btn setTitle:IconfontName(@&quot;chat_voice_pressed&quot;) forState:(UIControlStateSelected)];</span><br></pre></td></tr></table></figure><p>推荐第三方封装库：</p><p>OC:<br><a href="https://github.com/JohnWong/IconFont" target="_blank" rel="noopener">IconFont</a></p><p>Swift:<br><a href="https://github.com/XiangWuShuo/EFIconFont" target="_blank" rel="noopener">EFIconFont</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="一、关于-iconfont"><a href="#一、关于-iconfont" class="headerlink" title="一、关于 iconfont"></a>一、关于 iconfont</h2><p>从名字上拆分<code>icon</code> + <code>font</code>字面上大家都可以理解，其实<code>iconfont</code> 就是让我们可以像使用字体一样来使用图标。</p><p>使用 <code>iconfont</code> 的好处有：</p><ul><li>可以减少 <code>App</code> 的体积；</li><li>图标保真缩放，可以省去 <code>@2x</code> 和 <code>@3x</code> 图的适配；</li><li>适应换肤需求，使用方便。<a id="more"></a><h2 id="二、使用-iconfont"><a href="#二、使用-iconfont" class="headerlink" title="二、使用 iconfont"></a>二、使用 iconfont</h2></li></ul><p>首先去 <code>iconfont</code> 图标库下载需求图标</p><p><a href="https://www.iconfont.cn" target="_blank" rel="noopener">阿里巴巴矢量图片库</a></p><p>其它选择</p><p><a href="https://www.easyicon.net" target="_blank" rel="noopener">easyicon</a></p><p><a href="http://fontello.com" target="_blank" rel="noopener">fontello</a></p><p><a href="https://icomoon.io" target="_blank" rel="noopener">icomoon</a></p><p>以阿里巴巴矢量图片库为例使用<code>iconfont</code></p><h3 id="1、选择图片加入购物车加入项目下载"><a href="#1、选择图片加入购物车加入项目下载" class="headerlink" title="1、选择图片加入购物车加入项目下载"></a>1、选择图片加入购物车加入项目下载</h3><p><img src="/images/20190203/Snip20190203_1.png" alt=""></p><p>每个图标都会对应一个<code>unicode码</code>和名称。 这些代码是<code>&amp;#xXXXX</code>格式的，但是在 Xcode 中需要转换成<code>\U0000XXXX</code>格式的。</p><h3 id="2、将-iconfont-ttf-移到工程中"><a href="#2、将-iconfont-ttf-移到工程中" class="headerlink" title="2、将 iconfont.ttf 移到工程中"></a>2、将 iconfont.ttf 移到工程中</h3><p><img src="/images/20190203/Snip20190203_2.png" alt=""></p><p>下载完以后，我们会发现文件夹里包含如图二文件。我们只需要将<code>iconfont.tff</code>拖入工程中即可。</p><h3 id="3、确保已经导入-iconfont-tff"><a href="#3、确保已经导入-iconfont-tff" class="headerlink" title="3、确保已经导入 iconfont.tff"></a>3、确保已经导入 iconfont.tff</h3><p><img src="/images/20190203/Snip20190203_3.png" alt=""></p><p>为了保证<code>iconfont.tff</code>已导入成功，在<code>Target--Build Phases--Bundle Resource</code> 里检查一下。</p><h3 id="4、添加Fonts-provided-by-application字段"><a href="#4、添加Fonts-provided-by-application字段" class="headerlink" title="4、添加Fonts provided by application字段"></a>4、添加<code>Fonts provided by application</code>字段</h3><p><img src="/images/20190203/Snip20190203_4.png" alt=""></p><p>打开<code>info.plist</code>文件，添加<code>Fonts provided by application</code>字段。</p><h2 id="三、项目中使用"><a href="#三、项目中使用" class="headerlink" title="三、项目中使用"></a>三、项目中使用</h2><p>简单使用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">label.text = IconfontName(@&quot;mine_logout&quot;); // 这里的“mine_logout”就是图标的名称。</span><br><span class="line">label.font = IconFontSize(64);</span><br><span class="line">label.textColor = [UIColor grayColor];</span><br><span class="line">label.textAlignment = NSTextAlignmentCenter;</span><br><span class="line"></span><br><span class="line">// 如果是设置 button 的图标</span><br><span class="line">[btn setTitle:IconfontName(@&quot;chat_voice_normal&quot;) forState:(UIControlStateNormal)];</span><br><span class="line">[btn setTitle:IconfontName(@&quot;chat_voice_pressed&quot;) forState:(UIControlStateSelected)];</span><br></pre></td></tr></table></figure><p>推荐第三方封装库：</p><p>OC:<br><a href="https://github.com/JohnWong/IconFont" target="_blank" rel="noopener">IconFont</a></p><p>Swift:<br><a href="https://github.com/XiangWuShuo/EFIconFont" target="_blank" rel="noopener">EFIconFont</a></p><h2 id="四、其它"><a href="#四、其它" class="headerlink" title="四、其它"></a>四、其它</h2><p>推荐两个压缩图标的网站，不会影响画质，也不会变形或模糊。</p><p><a href="https://imagecompressor.com/" target="_blank" rel="noopener">Optimizilla</a></p><p><a href="https://img.top/" target="_blank" rel="noopener">img.top</a></p>]]></content>
     
     <summary type="html">
     
@@ -191,11 +191,11 @@
     
       <category term="LLVM" scheme="http://blog.developerly.net/tags/LLVM/"/>
     
+      <category term="编译器" scheme="http://blog.developerly.net/tags/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
+    
       <category term="Clang" scheme="http://blog.developerly.net/tags/Clang/"/>
     
       <category term="插件开发" scheme="http://blog.developerly.net/tags/%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="编译器" scheme="http://blog.developerly.net/tags/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
     
   </entry>
   
@@ -440,9 +440,9 @@
       <category term="iOS" scheme="http://blog.developerly.net/categories/iOS/"/>
     
     
-      <category term="App上架" scheme="http://blog.developerly.net/tags/App%E4%B8%8A%E6%9E%B6/"/>
-    
       <category term="AppStore" scheme="http://blog.developerly.net/tags/AppStore/"/>
+    
+      <category term="App上架" scheme="http://blog.developerly.net/tags/App%E4%B8%8A%E6%9E%B6/"/>
     
       <category term="证书" scheme="http://blog.developerly.net/tags/%E8%AF%81%E4%B9%A6/"/>
     
@@ -541,9 +541,9 @@
       <category term="iOS" scheme="http://blog.developerly.net/categories/iOS/"/>
     
     
-      <category term="Xcode" scheme="http://blog.developerly.net/tags/Xcode/"/>
-    
       <category term="iOS" scheme="http://blog.developerly.net/tags/iOS/"/>
+    
+      <category term="Xcode" scheme="http://blog.developerly.net/tags/Xcode/"/>
     
   </entry>
   
